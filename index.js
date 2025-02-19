@@ -81,7 +81,9 @@ function checkLowercase(pass1){ // To check if at least one character is lowerca
             if(pass1.charAt(i).toLowerCase() === pass1.charAt(i)){
                 return true;
             }
-        }https://github.com/CMSC-100-2S24-25-U3L/exer-03-javascript-basics-part-1-Seej06o"))
+        }
+      }
+}
 console.log(validatePassword("hello", "hello"))
 console.log(validatePassword("hello1234", "hello1234"))
 console.log(validatePassword("Hello1234", "Hello1234"))
@@ -105,3 +107,29 @@ function reverseString(password){
 }
 
 console.log(reverseString("Seej"))
+
+// Number 3: Storing the password to the Object
+
+function storePassword(username, pass1, pass2){
+
+	// check if parameters given are string
+	if(typeof(username) == "string" && typeof(pass1) == "string" && typeof(pass2) == "string"){
+
+    	if(validatePassword(pass1,pass2)){
+        	let myObject = {
+            	name: username,
+              newpassword: reverseString(pass2)
+        	};
+          return myObject;
+    	} else {
+      let myObject = {
+        name: username,
+        newpassword: pass1
+      };
+    return myObject;
+  }
+}
+}
+
+console.log(storePassword("John", "Pass1234", "Pass1234"));
+console.log(storePassword("John", "Pass123", "Pass12345"));
