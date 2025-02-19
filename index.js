@@ -81,13 +81,27 @@ function checkLowercase(pass1){ // To check if at least one character is lowerca
             if(pass1.charAt(i).toLowerCase() === pass1.charAt(i)){
                 return true;
             }
-        }
-    }
-    return false;
-}
-
-console.log(validatePassword("helloworld", "hello"))
+        }https://github.com/CMSC-100-2S24-25-U3L/exer-03-javascript-basics-part-1-Seej06o"))
 console.log(validatePassword("hello", "hello"))
 console.log(validatePassword("hello1234", "hello1234"))
 console.log(validatePassword("Hello1234", "Hello1234"))
 console.log(validatePassword("HELLO1234", "HELLO1234"))
+
+
+// Number 2: Reversing the password
+
+function reverseString(password){
+	var reversedString = ""
+
+	if(typeof(password) == "string"){
+
+    	for(i = password.length-1; i>=0; i--){
+        	reversedString += password[i]
+    	}
+	} else {return console.log("password is not a string")}
+
+	return reversedString;
+
+}
+
+console.log(reverseString("Seej"))
